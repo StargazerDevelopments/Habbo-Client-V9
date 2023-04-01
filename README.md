@@ -3,7 +3,9 @@
 Custom Habbo v9 dcrs with improved code, new features and more!
 
 **NOTE:**<br>
-Please note that this requires a custom v9 server. Normal v9 servers will be broken due to invalid packets. Check my Github for a custom fork of Kepler working on these DCRs. 
+Please note that this requires a custom v9 server. Normal v9 servers will be broken due to invalid packets. Check my Github for a custom fork of Kepler working on these DCRs.<br>
+<br>
+Strikethrough features are done.
 
 **Glossary:**<br>
 S > C: Server > Client, all packets sent by the server and handled by the client<br>
@@ -12,7 +14,7 @@ C > S: Client > Server, all packets sent by the client and handled by the server
 **TODO**:
 - General changes + new features
     - Create a separate Habbo.dir/fuse_client.cst for scaled client
-    - Add SSO ticket login
+    - ~~Add SSO ticket login~~
     - Add windows
     - Add landscape
     - Add infofeed from v28+
@@ -26,7 +28,7 @@ C > S: Client > Server, all packets sent by the client and handled by the server
     - Change `on retrieveCatalogueIndex` to the new packet format (C > S)
     - Change `on retrieveCataloguePage` to the new packet format (C > S)
 - hh_entry
-    - Remove a check in `on handleSecretKey` so it doesn't empty `tClientUrl` if the `tHost` is containing a specific string (which is obfuscated but IIRC is localhost)
+    - ~~Remove a check in `on handleSecretKey` so it doesn't empty `tClientUrl` if the `tHost` is containing a specific string (which is obfuscated but IIRC is localhost)~~
     - Change `on handleUserObj` to the new packet format (S > C)
     - Change `on handleEPSnotify` to the new packet format (S > C)
     - Change `on handleErr` to the new packet format (S > C)
@@ -52,9 +54,11 @@ C > S: Client > Server, all packets sent by the client and handled by the server
 - hh_photo:
     - To check out if `on handle_film_mus` needs to be changed since at the moment I'm not sure what it is
 - hh_purse:
-    - Change `on_handle_purse` so the amount of credits is read as an integer, instead of as a string, parsed as a float converted to an integer
-    - Change `on_handle_purse` to the new packet format (S > C)
-    - Clean up `on handle_purse` so every `tMsg.subject` goes in their own handle function
+    - ~~Change `on_handle_purse` so the amount of credits is read as an integer, instead of as a string, parsed as a float converted to an integer~~
+    - ~~Change `on_handle_purse` (credit log) to the new packet format (S > C)~~
+    - Change `on_handle_purse` (redeem voucher ok) to the new packet format (S > C)
+    - ~~Change `on_handle_purse` (redeem voucher error) to the new packet format (S > C)~~
+    - ~~Clean up `on handle_purse` so every `tMsg.subject` goes in their own handle function~~
     - Change `on handle_tickets` so it reads the ticket amount as int
     - Change `on handle_ticketsbuy` so it reads the ticket amount as int
 - hh_registrat
