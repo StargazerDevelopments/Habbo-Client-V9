@@ -29,7 +29,7 @@ C > S: Client > Server, all packets sent by the client and handled by the server
     - Change `on retrieveCataloguePage` to the new packet format (C > S)
 - hh_entry
     - ~~Remove a check in `on handleSecretKey` so it doesn't empty `tClientUrl` if the `tHost` is containing a specific string (which is obfuscated but IIRC is localhost)~~
-    - Change `on handleUserObj` to the new packet format (S > C)
+    - ~~Change `on handleUserObj` to the new packet format (S > C)~~
     - Change `on handleEPSnotify` to the new packet format (S > C)
     - Change `on handleErr` to the new packet format (S > C)
     - Remove `GET_PASSWORD` from `tCmds` or use it since it is never sent
